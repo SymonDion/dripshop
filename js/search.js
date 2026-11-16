@@ -1,0 +1,1 @@
+function searchProducts(query,list=PRODUCTS){const q=(query||'').trim().toLowerCase();if(!q)return list;return list.filter(p=>[p.name,p.brand,p.category,p.gender,p.description,...p.sizes,...p.colors].some(v=>String(v).toLowerCase().includes(q)))}

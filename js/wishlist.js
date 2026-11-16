@@ -1,0 +1,1 @@
+const Wishlist={key:'drip-wishlist',items(){try{return JSON.parse(localStorage.getItem(this.key)||'[]')}catch{return[]}},has(id){return this.items().includes(id)},toggle(id){let a=this.items();a=a.includes(id)?a.filter(x=>x!==id):[...a,id];localStorage.setItem(this.key,JSON.stringify(a));updateBadges();return a.includes(id)}};
